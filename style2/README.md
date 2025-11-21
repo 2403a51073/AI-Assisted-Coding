@@ -1,4 +1,4 @@
-# **📈 Stock Market Trend Analyzer 2 – README**
+# ** Stock Market Trend Analyzer 2 – README**
 
 This is a simple web application that analyzes stock prices from a CSV file.
 It uses **Flask** on the backend and **HTML, CSS, JavaScript, Chart.js** on the frontend.
@@ -14,7 +14,7 @@ The app shows:
 
 ---
 
-## **🚀 How to Run the Application**
+## ** How to Run the Application**
 
 ### **1️⃣ Install Flask**
 
@@ -42,7 +42,7 @@ Open this link in your browser.
 
 ---
 
-## **📥 How to Use the App**
+## ** How to Use the App**
 
 1. Open the application in your browser.
 2. Click **Choose File** and upload a CSV file containing stock prices.
@@ -61,7 +61,7 @@ The app automatically reads the **last numeric value in each row**.
 
 ---
 
-## **🛠 Technologies Used**
+## ** Technologies Used**
 
 * **Python + Flask**
 * **HTML**
