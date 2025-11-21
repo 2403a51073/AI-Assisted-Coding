@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- 
+    ***************************************
+    *   META & PAGE CONFIGURATION SECTION *
+    ***************************************
+  -->
+
+  <!-- Specifies character encoding -->
+  <meta charset="utf-8" />
+
+  <!-- Ensures responsive display on all devices -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Page Title -->
+  <title>Stock Market Trend Analyzer 2</title>
+
+  <!-- 
+    Linking external CSS file.
+    NOTE: File must be present in your project root as /style2.css
+  -->
+  <link rel="stylesheet" href="/style2.css">
+
+  <!-- Loads Chart.js library for drawing graphs -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- Main container for card-style layout -->
+  <main class="card">
+
+    <!-- Page heading -->
+    <h1>Stock Market Trend Analyzer</h1>
+
+    <!-- Small description -->
+    <p class="muted">Upload a CSV file containing stock prices.</p>
+
+    <!-- 
+      ================================
+      *     FILE UPLOAD FORM        *
+      ================================
+      This form allows user to upload a .csv file.
+    -->
+    <form id="uploadForm">
+      <!-- File input (only .csv files allowed) -->
+      <input type="file" id="file" accept=".csv" required>
+
+      <!-- Analyze button -->
+      <button class="btn">Analyze</button>
+    </form>
+
+    <!-- 
+      =================================
+      *     RESULT DISPLAY SECTION    *
+      =================================
+      Contains trend, stats, chart, and history table.
+    -->
+    <div class="result">
+
+      <!-- Trend and slope display box -->
+      <div class="trend-box">
+        <div id="trend">No analysis yet.</div>
+        <div id="slope" class="small muted"></div>
+      </div>
+
+      <!-- 
+        ================================
+        *      STATISTICS SUMMARY     *
+        ================================
+        Highest / Lowest / Average / Count
+      -->
+      <div class="stats-grid">
+
+        <div class="stat-card">
+          <div class="title">Highest</div>
+          <div id="highest" class="large">-</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="title">Lowest</div>
+          <div id="lowest" class="large">-</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="title">Average</div>
+          <div id="average" class="large">-</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="title">Count</div>
+          <div id="count" class="large">0</div>
+        </div>
+
+      </div>
+
+      <!-- Chart container for stock price graph -->
+      <div class="chartwrap">
+        <canvas id="chart" height="150"></canvas>
+      </div>
+
+      <!-- 
+        ================================
+        *        PRICE HISTORY TABLE  *
+        ================================
+        Displays: Date | Price | Change
+      -->
+      <h3>History</h3>
+
+      <table id="historyTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Price</th>
+            <th>Change</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+    </div>
+
+  </main>
+
+  <!-- 
+    External JavaScript File
+    NOTE: File must exist at /app2.js
+    This script handles CSV reading, analysis, chart rendering, and table updates.
+  -->
+  <script src="/app2.js"></script>
+
+</body>
+
+</html>

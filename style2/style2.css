@@ -1,0 +1,124 @@
+/* ===========================================================
+   ROOT THEME COLORS (CSS Variables)
+   These make it easy to reuse consistent colors everywhere
+   =========================================================== */
+:root {
+    --bg: #0b1220;        /* Background color */
+    --card: #0f1726;      /* Card color */
+    --accent: #7c3aed;    /* Purple accent color */
+    --muted: #94a3b8;     /* Muted text color */
+}
+
+/* ==========================================
+   Universal element styling
+   ========================================== */
+* {
+    box-sizing: border-box;            /* Include padding/border in width */
+    font-family: Inter, Arial, system-ui; /* Smooth modern font */
+}
+
+/* ==========================================
+   BODY STYLING
+   ========================================== */
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #070812, #0b1220); /* Gradient background */
+    color: #e6eef8;     /* Text color */
+    padding: 30px;      /* Space around content */
+}
+
+/* ==========================================
+   MAIN CARD CONTAINER
+   ========================================== */
+.card {
+    width: 850px;                            /* Fixed width */
+    margin: auto;                            /* Center horizontally */
+    padding: 25px;
+    border-radius: 12px;                     /* Rounded corners */
+    background: rgba(255, 255, 255, 0.04);   /* Transparent glass look */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Soft glow shadow */
+}
+
+/* ==========================================
+   BUTTON STYLING
+   ========================================== */
+.btn {
+    background: var(--accent);   /* Purple accent */
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;             /* Pointer cursor on hover */
+}
+
+/* ==========================================
+   FILE INPUT FIELD
+   ========================================== */
+input[type=file] {
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+/* ==========================================
+   TREND BOX (Trend + Slope display area)
+   ========================================== */
+.trend-box {
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(124, 58, 237, 0.1);     /* Slight purple tint */
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    margin-top: 10px;
+}
+
+/* ==========================================
+   STATISTICS GRID (4 boxes: high/low/avg/count)
+   ========================================== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 12px;
+    margin-top: 15px;
+}
+
+/* ==========================================
+   INDIVIDUAL STAT CARD
+   ========================================== */
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);   /* Slight white transparency */
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Large bold number inside stat cards */
+.large {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   CHART WRAPPER (border around graph)
+   ========================================== */
+.chartwrap {
+    margin-top: 20px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
+    border-radius: 8px;
+}
+
+/* ==========================================
+   HISTORY TABLE
+   ========================================== */
+#historyTable {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse; /* Merge cell borders */
+}
+
+/* Table header & cell styling */
+#historyTable th,
+#historyTable td {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divider line */
+}
