@@ -1,4 +1,4 @@
-# ** Stock Market Trend Analyzer 2 – README**
+# ** Stock Market Trend Analyzer  – README**
 
 This is a simple web application that analyzes stock prices from a CSV file.
 It uses **Flask** on the backend and **HTML, CSS, JavaScript, Chart.js** on the frontend.
